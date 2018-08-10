@@ -23,20 +23,24 @@
     </dependency>
   </dependencies>
   
-  <profiles>
- <profile>
-    <id>metrics</id>
-    <build>
-      <plugins>
-      <!--  PMD  -->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.50</version>
-        </plugin>
-      </plugins>
-    </build>
-  </profile>
-</profiles>  
+ <plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-pmd-plugin</artifactId>
+<version>3.50</version>
+<configuration>
+<linkXRef>false</linkXRef>
+<targetJdk>1.8</targetJdk>
+<rulesets>
+<ruleset>/rulesets/basic.xml</ruleset>
+</rulesets>
+</configuration>
+</plugin>
+</plugins>
+</reporting>
+
+<properties>
+<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> 
+</properties>
+
   
   </project>
