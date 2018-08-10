@@ -22,9 +22,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
-  
-  
+  </plugins>
   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-pmd-plugin</artifactId>
@@ -50,7 +48,7 @@
         </configuration>
       </reportSet>
     </reportSets>
-</plugin>
-  
+   </plugin>
+  </plugins>
   
 </project>
