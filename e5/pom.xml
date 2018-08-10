@@ -22,4 +22,35 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  
+  
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <version>3.50</version>
+    <reportSets>
+      <reportSet>
+        <id>pmd-report</id>
+        <reports>
+          <report>pmd</report>
+        </reports>
+        <configuration>
+          <skipEmptyReport>false</skipEmptyReport>
+        </configuration>
+      </reportSet>
+
+      <reportSet>
+        <id>cpd-report</id>
+        <reports>
+          <report>cpd</report>
+        </reports>
+        <configuration>
+          <skipEmptyReport>false</skipEmptyReport>
+        </configuration>
+      </reportSet>
+    </reportSets>
+</plugin>
+  
+  
 </project>
